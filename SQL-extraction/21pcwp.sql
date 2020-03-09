@@ -9,7 +9,9 @@ create view pcwp_nstemi as
   select
     subject_id
     ,hadm_id
-    ,substring(text, 'pcwp (.*?)\n') as pcwp
+    ,case when substring(text, 'pcwp (.*?)([0-9]*.[0-9]+)') is not null then
+    cast(substring(substring(text, strpos(text,'pcwp'),16),'([0-9]*\.[0-9]+)')as double precision)
+    else null end as pcwp
 from notas_nstemi -- for STEMI: notas_stemi
 order by subject_id;
 
