@@ -7,12 +7,19 @@
 --- Step 1: Search the word troponin in clinical notes
 drop view tropo_nstemi;
 create view tropo_nstemi as
-  select
-    subject_id
-    ,hadm_id
-    ,substring(text, 'troponin (.*?)\n') as troponin
-from notas_nstemi -- for STEMI: notas_stemi
-order by subject_id;
+select
+	ids.subject_id
+	,ids.hadm_id
+  	,case when substring(text, 'troponin (.*?)([0-9]*.[0-9]+)') is not null then
+  	cast(substring(substring(text, strpos(text,'troponin'),16),'([0-9]*\.[0-9]+)')as double precision)
+		else null end as troponin
+from nstemi_ccu ids
+inner join noteevents dx
+on ids.subject_id = dx.subject_id and ids.hadm_id = dx.hadm_id
+and dx.charttime between ids.intime and ids.intime + interval '1' day
+where ids.los >1.0
+group by ids.subject_id, ids.hadm_id, troponin
+order by ids.subject_id;
 
 --- Step 2: Export the table previously created (csv file). Once exported the table, the idea is save the troponin value (it was presented).
 \copy (SELECT * FROM tropo_nstemi) to '/tmp/tropo_nstemi.csv' CSV HEADER;
