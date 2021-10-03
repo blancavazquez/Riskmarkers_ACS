@@ -26,3 +26,17 @@ You can create a conda environment with all the dependencies using the environme
 ```
 conda env create --file markers_ACS.yml
 ```
+
+## Citation:
+
+```
+@misc{vazquez2021risk,
+      title={Risk markers by sex and age group for in-hospital mortality in patients with STEMI or NSTEMI: an approach based on machine learning}, 
+      author={Blanca Vazquez and Gibran Fuentes and Fabian Garcia and Gabriela Borrayo and Juan Prohias},
+      year={2021},
+      eprint={2101.01835},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
+
