@@ -23,4 +23,4 @@ This repository is organized as follows:
 
 You can create a conda environment with all the dependencies using the environment.yml file in this repository.
 
-conda env create --file markers_ACS.yml
+_conda env create --file markers_ACS.yml
