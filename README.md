@@ -31,7 +31,7 @@ conda env create --file markers_ACS.yml
 
 ```
 @misc{vazquez2021risk,
-      title={Risk markers by sex and age group for in-hospital mortality in patients with STEMI or NSTEMI: an approach based on machine learning}, 
+      title={Risk markers by sex for in-hospital mortality in patients with acute coronary syndrome based on machine learning}, 
       author={Blanca Vazquez and Gibran Fuentes and Fabian Garcia and Gabriela Borrayo and Juan Prohias},
       year={2021},
       eprint={2101.01835},
