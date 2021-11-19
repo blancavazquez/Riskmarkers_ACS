@@ -1,4 +1,4 @@
-## Risk markers by sex for in-hospital mortality in patients with acute coronary syndrome based on machine learning
+## Risk markers by sex for in-hospital mortality in patients with acute coronary syndrome: a machine learning approach
 
 This repository identified in-hospital mortality markers for women and men in Acute Myocardial Infarction (ACS) sub-populations from a public database of EHR using machine learning methods.
 
