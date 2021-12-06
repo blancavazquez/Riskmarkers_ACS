@@ -30,13 +30,16 @@ conda env create --file markers_ACS.yml
 ## Citation:
 
 ```
-@misc{vazquez2021risk,
-      title={Risk markers by sex for in-hospital mortality in patients with acute coronary syndrome: a machine learning approach}, 
-      author={Blanca Vazquez and Gibran Fuentes and Fabian Garcia and Gabriela Borrayo and Juan Prohias},
-      year={2021},
-      eprint={2101.01835},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+@article{VAZQUEZ2021100791,
+title = {Risk markers by sex for in-hospital mortality in patients with acute coronary syndrome: A machine learning approach},
+journal = {Informatics in Medicine Unlocked},
+volume = {27},
+pages = {100791},
+year = {2021},
+issn = {2352-9148},
+doi = {https://doi.org/10.1016/j.imu.2021.100791},
+url = {https://www.sciencedirect.com/science/article/pii/S2352914821002616},
+author = {Blanca Vázquez and Gibran Fuentes-Pineda and Fabian García and Gabriela Borrayo and Juan Prohías},
 }
 ```
 
